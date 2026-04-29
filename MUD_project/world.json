@@ -1,0 +1,21 @@
+[
+  {
+    "Id": "alley",
+    "Name": "Rainy Alley 7",
+    "Description": "You are standing in a dark alley. Neon signs flicker all around.",
+    "Exits": {
+      "north": "neon_bar"
+    },
+    "Items": ["datachip"]
+  },
+  {
+    "Id": "neon_bar",
+    "Name": "The Neon Bar",
+    "Description": "A smoky bar filled with people sporting cheap implants",
+    "Exits": {
+      "south": "alley"
+    },
+    "Items": ["datachip"]
+  }
+
+]
