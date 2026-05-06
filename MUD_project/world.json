@@ -1,21 +1,30 @@
 [
   {
     "Id": "alley",
-    "Name": "Rainy Alley 7",
-    "Description": "You are standing in a dark alley. Neon signs flicker all around.",
-    "Exits": {
-      "north": "neon_bar"
-    },
-    "Items": ["datachip"]
+    "Name": "Dark Alley",
+    "Description": "A dark alleyway. On the floor, there is a 'chip'.",
+    "Exits": { "north": "tech_lab" },
+    "Items": ["chip", "shards"]
   },
   {
-    "Id": "neon_bar",
-    "Name": "The Neon Bar",
-    "Description": "A smoky bar filled with people sporting cheap implants",
-    "Exits": {
-      "south": "alley"
-    },
-    "Items": ["datachip"]
+    "Id": "tech_lab",
+    "Name": "Tech Laboratory",
+    "Description": "A room full of wires. Use the 'chip' here to help the technician.",
+    "Exits": { "south": "alley", "east": "office" },
+    "Items": ["burger"]
+  },
+  {
+    "Id": "office",
+    "Name": "Corporate Office",
+    "Description": "The main office. You need a 'keycard' to enter. The exit to 'finish' is up.",
+    "Exits": { "west": "tech_lab", "up": "finish" },
+    "Items": []
+  },
+  {
+    "Id": "finish",
+    "Name": "The Roof",
+    "Description": "CONGRATS! You escaped!",
+    "Exits": {},
+    "Items": []
   }
-
 ]

@@ -1,4 +1,6 @@
-﻿using TcpServer2;
+﻿
+using System.Text.Json;
+using System.IO;
 
 namespace MUD_project
 {
@@ -6,8 +8,14 @@ namespace MUD_project
     {
         static void Main(string[] args)
         {
-            Server server = new Server(100);
-            Console.WriteLine("Server bezi");
+      
+            string configText = File.ReadAllText("config.json");
+            ServerConfig config = JsonSerializer.Deserialize<ServerConfig>(configText);
+
+   
+            Server server = new Server(config.Port);
+
+            Console.WriteLine($"Server bezi na portu {config.Port}");
             Console.ReadLine();
 
 

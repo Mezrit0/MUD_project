@@ -1,0 +1,5 @@
+{
+  "Port": 1235,
+  "WelcomeMessage": "Welcome to Night City!",
+  "SavePath": "players/"
+}

@@ -12,6 +12,7 @@ namespace MUD_project
         public string CurrentRoomId { get; set; }
         private StreamWriter writer;
         public List<string> Inventory { get; set; } = new List<string>();
+        public string Password { get; set; }
 
         public Player(StreamWriter _writer)
         {
