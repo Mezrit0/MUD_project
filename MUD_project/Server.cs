@@ -186,6 +186,16 @@ namespace MUD_project
                     {
                         await currentPlayer.SendMessage("Commands: scan, go [dir], say [msg], take [item], use [item], inv, exit");
                     }
+                    else if (command.StartsWith("say "))
+                    {
+                        string message = data.Substring(4).Trim(); 
+                        if (!string.IsNullOrWhiteSpace(message))
+                        {
+                            string formattedMsg = $"{currentPlayer.Name} says: \"{message}\"";
+                            // posle zpravu sechm ve mistnosti
+                            await BroadcastToRoom(currentPlayer.CurrentRoomId, formattedMsg);
+                        }
+                    }
                     // Pohyb 
                     else if (command.StartsWith("go "))
                     {
